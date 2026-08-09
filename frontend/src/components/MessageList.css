@@ -1,0 +1,87 @@
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(180deg, #0f172a 0%, #1e3a5f 100%);
+}
+
+.message-list.loading,
+.message-list.error,
+.message-list.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(59, 130, 246, 0.2);
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.message-list.loading p {
+  color: #7dd3fc;
+  font-size: 14px;
+}
+
+.error-icon,
+.empty-icon {
+  font-size: 48px;
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 16px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.empty-text {
+  color: #bae6fd;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.empty-subtitle {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Scrollbar styling */
+.message-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.message-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.message-list::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.4);
+  border-radius: 4px;
+}
+
+.message-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.6);
+}
+
+@media (max-width: 768px) {
+  .message-list {
+    padding: 16px 12px;
+  }
+}
