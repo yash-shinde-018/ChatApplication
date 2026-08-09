@@ -1,80 +1,133 @@
 # Real-Time Chat Application
 
-A real-time chat application built with React + Vite (frontend) and Node.js + Express (backend), using Socket.io for real-time communication and MongoDB for data persistence.
+A modern real-time multi-room chat application built using **React, Node.js, Express, Socket.io, and MongoDB**.
 
-## Tech Stack
+The application allows users to register and log in securely, create and join public or private chat rooms, communicate in real time using Socket.io, and share room invitation links.
 
-- **Frontend**: React + Vite, JavaScript
-- **Backend**: Node.js + Express, JavaScript
-- **Real-time Communication**: Socket.io
-- **Database**: MongoDB with Mongoose
+---
 
-## Project Structure
+## Features
 
-```
-realtime-chat/
-├── frontend/          # React + Vite application
-├── backend/           # Node.js + Express server
-└── README.md
-```
+### Authentication
 
-## Getting Started
+- User registration with username, email, and password
+- Secure password hashing using bcrypt
+- JWT-based authentication
+- Protected API routes
+- Persistent authentication
+- Login and logout functionality
+- Authenticated Socket.io connections
 
-### Prerequisites
+### Dashboard
 
-- Node.js (v14 or higher)
-- npm or yarn
-- MongoDB (for later phases)
+- View available chat rooms
+- Search rooms by name or description
+- View room type and capacity
+- Create new chat rooms
+- Join existing rooms
+- Modern glassmorphism-inspired interface
 
-### Frontend Setup
+### Real-Time Chat
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+- Real-time messaging using Socket.io
+- Messages delivered instantly without page refresh
+- Room-specific messaging
+- Message timestamps
+- Different UI for sent and received messages
+- Automatic scrolling to latest messages
+- Messages persisted in MongoDB
+- Chat history restored after refresh
 
-The frontend will be available at `http://localhost:5173`
+### Chat Rooms
 
-### Backend Setup
+- Create public rooms
+- Create private rooms
+- Password-protected private rooms
+- Maximum user capacity
+- Join and leave rooms
+- Room-specific message history
+- Room membership validation
+- Room isolation
 
-```bash
-cd backend
-npm install
-cp .env.example .env
-npm run dev
-```
+### Room Sharing
 
-The backend will be available at `http://localhost:5000`
+- Generate shareable room links
+- Copy room invitation links
+- Public rooms can be joined directly
+- Private rooms require a password
+- Room passwords are never included in URLs
 
-## API Endpoints
+### UI/UX
 
-### Health Check
+- Modern glassmorphism-inspired design
+- Responsive layout
+- Desktop and mobile friendly
+- Connection status indicator
+- Loading states
+- Error handling
+- Empty states
+- Password visibility controls
+- Responsive chat interface
 
-- **GET** `/api/health` - Server health status
+---
 
-Response:
-```json
-{
-  "success": true,
-  "message": "Chat server is running"
-}
-```
+# Tech Stack
 
-## Development
+### Frontend
 
-Both frontend and backend support hot-reload during development:
+- React
+- Vite
+- JavaScript
+- Socket.io Client
+- CSS
+- Oxlint
 
-- **Frontend**: Changes to React components automatically refresh the browser
-- **Backend**: Changes to server files automatically restart the server via nodemon
+### Backend
 
-## Phases
+- Node.js
+- Express.js
+- Socket.io
+- Mongoose
+- JWT
+- bcrypt
+- dotenv
+- CORS
+- nodemon
 
-- **Phase 1**: Project setup (current)
-  - Root project structure
-  - Frontend initialization (React + Vite)
-  - Backend initialization (Express server)
-  - Environment configuration
-  - Health check endpoint
+### Database
 
-- **Phase 2+**: Chat functionality (coming soon)
+- MongoDB Atlas
+
+---
+
+## Installation
+
+Clone the repository: git clone <YOUR_GITHUB_REPOSITORY_URL>
+
+Navigate to the project: cd real-time-chat
+
+Running the Backend => Open a terminal: cd backend
+
+Install dependencies: npm install
+
+Create the .env file using the configuration described above.
+
+Start the backend: npm run dev
+
+The backend will normally run at: http://localhost:5000
+
+Health check: http://localhost:5000/api/health
+
+Running the Frontend
+
+Open another terminal: cd frontend
+
+Install dependencies: npm install
+
+Create the .env file.
+
+Start the frontend: npm run dev
+
+The application will normally be available at: http://localhost:5173
+      
+                         └───────────────┘
