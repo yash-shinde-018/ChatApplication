@@ -102,32 +102,23 @@ The application allows users to register and log in securely, create and join pu
 
 ## Installation
 
-Clone the repository: git clone <YOUR_GITHUB_REPOSITORY_URL>
-
-Navigate to the project: cd real-time-chat
-
-Running the Backend => Open a terminal: cd backend
-
-Install dependencies: npm install
-
-Create the .env file using the configuration described above.
-
-Start the backend: npm run dev
-
-The backend will normally run at: http://localhost:5000
-
-Health check: http://localhost:5000/api/health
-
-Running the Frontend
-
-Open another terminal: cd frontend
-
-Install dependencies: npm install
-
-Create the .env file.
-
-Start the frontend: npm run dev
+1. Clone the Repository
+      git clone <YOUR_GITHUB_REPOSITORY_URL>
+      cd real-time-chat
+   
+3. Backend Setup
+      - Open a terminal: cd backend
+      - Install dependencies: npm install
+      - Create the backend/.env file using the environment variables described above.
+      - Start the backend: npm run dev
+      - The backend will normally run at: http://localhost:5000
+      -  Health check: http://localhost:5000/api/health
+       
+3. Frontend Setup
+      - Open another terminal: cd frontend
+      - Install dependencies: npm install
+      - Create the frontend/.env file using the environment variables described above.
+      - Start the frontend: npm run dev
 
 The application will normally be available at: http://localhost:5173
-      
-                         └───────────────┘
+
